@@ -10,7 +10,7 @@ function mapStateToProps(store){
 }
 
 
-const CartContainer = ({ cart = [], total, dispatch }) => {
+const CartContainer = ({ cart = [], total }) => {
   if (cart.length === 0) {
     return (
       <section className="cart">
@@ -42,7 +42,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
             total <span>${total}</span>
           </h4>
         </div>
-        <button className="btn clear-btn" onClick={()=>{dispatch({type:CLEAR_CART})}}>clear cart</button>
+        <button className="btn clear-btn">clear cart</button>
       </footer>
     </section>
   );
